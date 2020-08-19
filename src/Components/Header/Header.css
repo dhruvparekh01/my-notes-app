@@ -1,0 +1,43 @@
+.Header {
+    display: flex;
+    margin-right: 150px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo {
+    flex: 8;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    /* border: SOLID BLACK 1PX; */
+}
+
+.btns {
+    flex: 2;
+
+    /* Center things inside the div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.b {
+    margin: 5px;
+}
+
+@media(max-width: 800px) {
+    .Features {
+        flex-direction: column-reverse;
+    }
+    .btns {
+        display: none;
+    }
+}
+
+.headerImg {
+    max-width: 130px;
+    max-height: 160px;
+}

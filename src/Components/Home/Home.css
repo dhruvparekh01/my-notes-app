@@ -1,0 +1,41 @@
+/* .container {
+    padding: 3% 35%;
+    border: black solid 1px;
+}
+@media(max-width: 800px) {
+    .container {
+        padding: 3% 10%;
+    }
+} */
+
+.lr {
+    display: flex;
+    /* border: solid black 1px; */
+}
+
+.f1 {
+    flex: 1;
+    /* border: solid black 1px; */
+    padding: 0% 10%;
+    align-self: center;
+}
+
+.f2 {
+    flex: 1;
+}
+
+.f-cont {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.note {
+    flex: 0 1 24%;
+    /* margin: 5px; */
+    /* padding: 2%; */
+    margin-top: 2%;;
+    flex-wrap: wrap;
+}
+
