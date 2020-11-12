@@ -1,6 +1,6 @@
 # My Notes
 
-My Notes is a simple note taking web app where users can keep a private list of notes.
+My Notes is a simple note taking web app where users can keep a private list of notes. Hosted URL: https://www.my-notes.ga/ 
 
 ## Usage
 
