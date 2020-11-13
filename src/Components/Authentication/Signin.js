@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {useHistory} from 'react-router-dom'
-
+import { CircularProgress } from '@material-ui/core'
 import '../../common.css'
 
 import Form from '../Form'
@@ -13,9 +13,11 @@ import request from '../../ApiSetup'
 function Signin() {
   const history = useHistory()
   const {setUser} = useContext(UserContext)
+  const [isLoading, setIsLoading] = useState(false)
   
   async function handleSubmit(requestBody, setErrorMessage) {
     try {
+      setIsLoading(true)
       const response = await request.post('/auth/login', requestBody)
       const jwtToken = await response.data
 
@@ -24,6 +26,8 @@ function Signin() {
 
       // Set the value in shared context
       setUser(jwtToken)
+
+      setIsLoading(false)
 
       // Redirect to home page
       history.push('/home')
@@ -46,10 +50,13 @@ function Signin() {
 
   return (
     <div className="Signup">
+      {!isLoading ? 
         <div className="test">
           <h1>Sign In</h1>
           <Form formVals={inputFields} onSubmit={handleSubmit} />
-        </div>
+        </div> :
+        <CircularProgress />
+      }
     </div>
   )
 }
